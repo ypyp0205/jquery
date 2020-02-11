@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	
+	function changeColor(c) {
+		result = document.getElementById('result1');
+		
+		result.style.background = c;
+	}
+
+	window.onload = function() {
+		document.body.style.background = 'lightpink';
+		f = document.ff;
+	}
+	function loadProc() {
+		document.body.style.background = 'lightyellow';
+	}
+	
+	function nameProc()() {
+		namevalue = f.name.value;
+		lowervalue = namevalue.toLowerCase();
+		
+		f.name.value = lowervalue;
+	}
+	function selProc()() {
+		
+	}
+</script>
+</head>
+<body onload= "loadProc()">
+
+	<div class="box">
+		<h2></h2>
+		<pre>
+
+		</pre>
+		
+		<input type="radio" name="color" onclick="changeColor('lightblue')">파랑
+		<input type="radio" name="color" onclick="changeColor('lightred')">빨강
+		<div id="result1"></div>
+		이름 : <input type="text" name="name" onchange="nameProc()">
+		&nbsp;&nbsp;&nbsp;
+		선택 : 
+		<select name="sel" onchange="selProc()">
+		<option value="봄">봄</option>
+		<option value="여름">여름</option>
+		<option value="가을" selected>가을</option>
+		<option value="겨울">겨울</option>
+		</select>
+	</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+
+<script>
+	function proc() {
+
+		while (true) {
+			input = prompt("값을 입력  >> ", "0~100");
+			if (input >= 0 && input <= 100) {
+				break;
+			}else{
+				alert("범위의 수가 아닙니다.");
+			}
+		}
+				
+
+
+		su = parseInt(input / 10);
+
+		switch (su) {
+		case 10:
+		case 9:
+			res = "A";
+			break;
+		case 8:
+			res = "B";
+			break;
+		case 7:
+			res = "C";
+			break;
+		case 6:
+			res = "D";
+			break;
+		default:
+			res = "F";
+			break;
+		}
+		result = "<h1>입력 : " + input + "</h1>";
+		result += "<h1>성적 : " + res + "</h1>";
+		out = document.getElementsByTagName('div')[0];
+		out.innerHTML = result;
+
+	}
+</script>
+</head>
+<body>
+	<pre>
+버튼을 클릭하면 0~100사이의 값을 입력
+성적을 구한다. A, B, C, D, F로 출력한다.
+출력은 div에 한다.
+switch를 이용한다.
+switch는 값 비교시 비교연산자를 사용할 수 없다.
+</pre>
+	<button type="button" onclick="proc()">확인</button>
+	<br>
+	<br>
+	<div></div>
+</body>
+</html>

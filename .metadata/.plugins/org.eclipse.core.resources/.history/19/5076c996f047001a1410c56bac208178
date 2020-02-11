@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function proc1() {
+
+	}
+</script>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 150px;
+}
+</style>
+</head>
+<body>
+
+	<div class="box">
+		<h2></h2>
+		<form action="">
+<fieldset>
+<legend>회원 정보 입력</legend>
+
+<label>아이디 
+<input type="text"></textarea>
+</label><br>
+
+
+<label>패스워드
+<input type="text">
+</label><br>
+
+
+<label>패스워드 확인
+<input type="text">
+</label><br>
+
+
+<label>이름
+<input type="text">
+</label><br>
+
+
+<label>성별
+<input type="radio">남자
+<input type="radio">여자
+</label><br>
+
+
+<label>휴대폰 번호
+<input type="text">
+</label><br>
+
+
+<label>이메일
+<input type="text">
+</label>
+
+<br>
+
+<button type="button">제출</button>
+<button type="button">초기화</button>
+
+
+</fieldset>
+		
+		
+		
+		</form>
+	</div>
+</body>
+</html>

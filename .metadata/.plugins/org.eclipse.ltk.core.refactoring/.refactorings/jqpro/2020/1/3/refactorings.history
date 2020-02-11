@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;webpage1.html&apos; to &apos;0113&apos;&#x0D;&#x0A;- Original project: &apos;jqpro&apos;&#x0D;&#x0A;- Destination element: &apos;0113&apos;&#x0D;&#x0A;- Original element: &apos;webpage1.html&apos;" description="Copy file" element1="WebContent/0103/webpage1.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1578882511854" target="/jqpro/WebContent/0113" units="0" version="1.0"/>
+</session>

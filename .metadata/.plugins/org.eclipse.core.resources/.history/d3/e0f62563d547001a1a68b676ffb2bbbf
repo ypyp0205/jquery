@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	window.onload = function(){
+		btn1 = document.getElementById('btn1');
+		result1 = document.getElementById('result1');
+	}
+	
+	function downProc() {
+		// 버튼을 누를때
+		btn.style.background = "green";
+		brn.style.color = "white"
+	}
+	function upProc() {
+		// 눌려진 버튼 놓을때
+		btn.style.background = "blue";
+		brn.style.color = "white"
+	}
+	function overProc() {
+
+	}
+	function outProc() {
+
+	}
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h2></h2>
+		<pre>
+
+		</pre>
+		<br>
+		<button id="btn1" type="button" onmousedown="downProc()" onmouseup="upProc()">open</button>
+		<br>
+		<div id="result1" onmouseover="overProc()" onmouseout="outProc()"></div>
+	</div>
+</body>
+</html>

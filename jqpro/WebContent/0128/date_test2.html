@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	function proc1() {
+		//현대날짜, 태어난 날짜 - date객체 생성
+		today = new Date();
+		myday = new Date(1990, 02, 05);
+
+		time = today.getTime() - myday.getTime();
+
+		// alert(time);
+		sec = time / 1000;
+		min = sec / 60;
+		hour = min / 60;
+		day = hour / 24;
+		year = day / 365;
+
+		res = "new Date() : " + today.toLocaleDateString() + "<br>";
+		res += "new Date(1990, 02, 05) : " + myday.toLocaleDateString()
+				+ "<br>";
+		res += "살아온 초 : " + sec;
+		res += "당신은 : " + year + "년 살았습니다." + "<br>";
+		res += "당신은 : " + day + "일 살았습니다." + "<br>";
+		res += "당신은 : " + hour + "시간 살았습니다." + "<br>";
+		res += "당신은 : " + min + "분 살았습니다." + "<br>";
+
+		document.getElementById('result1').innerHTML = res;
+
+	}
+	function proc2() {
+		today = new Date();
+
+		// time = 현재의 getTime() + 500일의 getTime()
+		milisec = today.getTime() + 100 * 1 * 24 * 60 * 60 * 1000;
+
+		//alert(milisec);
+
+		//milisec으로 새로운 Date객체를 생성
+		newday = new Date(milisec);
+
+		// 출력
+		document.getElementById('result2').innerHTML = newday
+				.toLocaleDateString();
+
+	}
+	function proc3() {
+
+		today = new Date();
+
+		// 선택한 날짜를 가져온다.
+		selday = document.getElementById('seldate').value;
+		selday = new Date(selday);
+
+		time = today.getTime() - selday.getTime();
+
+		day = time / 1000 / 60 / 60 / 24;
+
+		res = "구입날짜 : " + selday.toLocaleDateString() + "<br>";
+		res += "오늘 날짜 : " + today.toLocaleDateString() + "<br>";
+
+		if (day > 7) {
+			res += "교환/반품이 불가능 합니다."
+		} else {
+			res += "교환/반품이 가능 합니다."
+		}
+
+		document.getElementById('result3').innerHTML = res;
+	}
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h2>살아온 날 구하기</h2>
+		<pre>
+		today = new Date();
+		myday = new Date(1990, 02, 05);
+
+		time = today.getTime() - myday.getTime();
+
+		// alert(time);
+		sec = time / 1000;
+		min = sec / 60;
+		hour = min / 60;
+		day = hour / 24;
+		year = day / 365;
+
+		
+		</pre>
+		<br>
+		<button type="button" onclick="proc1()">실행</button>
+		<div id="result1"></div>
+	</div>
+
+	<div class="box">
+		<h2>앞으로의 날 구하기</h2>
+		<pre>
+			현재부터 100일 후의 날을 구한다.
+			milisec = today.getTime() + 100*1*24*60*60*1000;
+
+			//alert(milisec);
+	
+			//milisec으로 새로운 Date객체를 생성
+			newday = new Date(milisec);
+			
+		</pre>
+		<br>
+		<button type="button" onclick="proc2()">실행</button>
+		<div id="result2"></div>
+	</div>
+
+	<div class="box">
+		<h2>교환 가능/불가능 구하기</h2>
+		<pre>
+		
+		</pre>
+		구입날짜 : <input type="date" id="seldate">
+		<button type="button" onclick="proc3()">실행</button>
+		<div id="result3"></div>
+	</div>
+
+</body>
+</html>

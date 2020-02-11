@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<style type="text/css">
+div {
+	height: auto;
+	padding: 10px;
+	margin: 10px;
+	border: 1px dotted orange;
+}
+</style>
+<script type="text/javascript">
+	function proc1() {
+		res1 = document.getElementById("result1");
+		str = "";
+		for (i = 1; i <= 10; i++) {
+			str += i + "<br>";
+		}
+		res1.innerHTML = str;
+	}
+	function proc2() {
+		res1 = document.getElementById("result2");
+		str = 0;
+		for (i = 1; i <= 10; i++) {
+			str += i;
+		}
+		res1.innerHTML = str;
+	}
+	function proc3() {
+		input = prompt("숫자입력");
+		res1 = document.getElementById("result3");
+		str = "";
+		res = 0;
+		for (i = 1; i <= 9; i++) {
+
+			res = input * i;
+			str += input + " * " + i + " = " + res + "<br>";
+		}
+		res1.innerHTML = str;
+	}
+
+	function proc4() {
+
+		res1 = document.getElementById("result4");
+		str = "";
+		res = 0;
+		for (i = 2; i <= 9; i++) {
+			for (j = 1; j <= 9; j++) {
+				res = i * j;
+				str += i + " * " + j + " = " + res + "<br>";
+			}
+			str += "<br>";
+		}
+		res1.innerHTML = str;
+	}
+
+	function proc5() {
+		res1 = document.getElementById("result5");
+		str = "";
+		res = 0;
+		for (i = 1; i <= 9; i++) {
+			for (j = 2; j <= 9; j++) {
+				res = j * i;
+				str += j + " * " + i + " = " + res + "\t";
+			}
+			str += "<br>";
+		}
+		res1.style.whiteSpace = "pre";
+		res1.innerHTML = str;
+	}
+	function proc6() {
+		res1 = document.getElementById("result6");
+		str = "<h1>구구단표</h1>";
+		str += "<table border=1>";
+		
+		for (i = 1; i <= 9; i++) {
+			for (j = 2; j <= 9; j++) {
+				res = j * i;
+				str += j + " * " + i + " = " + res + "\t";
+			}
+			str += "<br>";
+		}
+		res1.innerHTML = str;
+	}
+</script>
+</head>
+<body>
+	<h3>1~10까지 출력</h3>
+	<button type="button" onclick="proc1()">1~10</button>
+	<div id="result1"></div>
+	<hr>
+	<h3>1~10까지 합</h3>
+	<button type="button" onclick="proc2()">1~10 합</button>
+	<div id="result2"></div>
+	<hr>
+	<h3>입력한 수의 구구단 출력</h3>
+	<button type="button" onclick="proc3()">구구단</button>
+	<div id="result3"></div>
+	<hr>
+	<h3>구구단 전체</h3>
+	<button type="button" onclick="proc4()">구구단 전체</button>
+	<div id="result4"></div>
+	<hr>
+	<h3>구구단 전체 - 가로</h3>
+	<button type="button" onclick="proc5()">구구단 전체</button>
+	<div id="result5"></div>
+	<hr>
+	<h3>구구단 전체 - table</h3>
+	<button type="button" onclick="proc6()">구구단 전체</button>
+	<div id="result6"></div>
+	<hr>
+</body>
+</html>

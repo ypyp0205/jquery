@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	window.onload = function() {
+		input1 = document.getElementsByTagName('input')[0];
+		input2 = document.getElementsByTagName('input')[1];
+		input3 = document.getElementsByTagName('input')[2];
+		output = document.getElementsByTagName('div')[0];
+	}
+
+	function proc(abc) {
+		//alert(abc.textContent);
+		//alert(abc.innerHTML);
+
+		// 버튼의 글자
+		txt = abc.textContent;
+
+		// 입력한값
+		vinput1 = input1.value;
+		vinput2 = input2.value;
+
+		console.log(vinput1 + "," + vinput2);
+
+		if (txt == ' + ') {
+			res = parseInt(vinput1) + parseInt(vinput2);
+		} else if (txt == ' - ') {
+			res = vinput1 - vinput2;
+		} else if (txt == ' * ') {
+			res = vinput1 * vinput2;
+		} else if (txt == ' / ') {
+			res = vinput1 / vinput2;
+		}
+
+		input3.value = res;
+
+		output.innerHTML = "<h2>" + res + "</h2>";
+		//output.textContent = "<h2>" + res + "</h2>";
+	}
+</script>
+
+</head>
+<body>
+	<h2>덧셈 계산기</h2>
+
+	수1 :
+	<input type="text">
+	<br> 수2 :
+	<input type="text">
+	<br> 결과 :
+	<input type="text">
+	<br>
+
+	<button type="button" onclick="proc(this)">+</button>
+	<button type="button" onclick="proc(this)">-</button>
+	<button type="button" onclick="proc(this)">*</button>
+	<button type="button" onclick="proc(this)">/</button>
+	<br>
+	<br>
+	<pre>
+div에 출력 	: 
+innerHTML 	: 출력내용속에 html태그가 실행되면서 출력한다.
+textContent : 출력내용속에 html태그가 그냥 글자로 출력된다.
+
+output.innerHTML = "&lt;h2&gt;" + res + "&lt;/h2&gt;";
+output.textContent = "&lt;h2&gt;" + res + "&lt;/h2&gt;";
+</pre>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	function proc1() {
+	namevalue = document.ff.name.value;
+	idvalue = document.ff.id.value;
+	
+	if (namevalue.trim().length == 0) {
+		alert("이름을 입력하세요.");
+		return false;
+	}
+	if (idvalue.trim().length == 0) {
+		alert("아이디를 입력하세요.");
+		return false;
+	}
+	res = "이름 : " + namevalue + "<br>";
+	res += "아이디 : " + idvalue + "<br>";
+	res += "<span>환영합니다.</span>";
+	
+	document.getElementById('result2').innerHTML = 
+	}
+	
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h2></h2>
+		<pre>
+
+		</pre>
+
+
+		<br>
+		<div id="result1">
+			<form name="ff">
+				이름<input type="text" name="name"><br> 
+				아이디 <input type="text" name="id"><br>
+				<button type="button" onclick="proc1()">open</button>
+
+			</form>
+		</div>
+<div id="result2"></div>			
+	</div>
+</body>
+</html>

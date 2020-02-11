@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	function proc1() {
+
+	}
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h2>File읽기</h2>
+		<pre>
+File객체			: 파일의 기본정보를 얻는다.
+이름(name), 크기(size), 종류(type), 변경날짜(lastMidifyDate)
+
+FileReader객체	: 파일의 내용을 읽을 수 있는 기능을 제공한다.
+메소드
+readAsText(file객체, 인코딩)
+readAsDataURL(file객체) 
+속성
+result	: 읽어온 파일의 내용이 저장되어 있다.
+error	: 오류정보가 저장된다.
+		</pre>
+		<form name="ff">
+		파일<input type="flie" name="file">
+		</form>
+		<br>
+		<button type="button" onclick="proc1()">open</button>
+		<br>
+		<div id="result1"></div>
+	</div>
+</body>
+</html>

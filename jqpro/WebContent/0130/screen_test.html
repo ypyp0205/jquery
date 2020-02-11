@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script type="text/javascript">
+	function proc1(url) {
+		win = window.open(url);
+		win.moveTo(0, 0);
+		win.resizeTo(screen.availWidth, screan.availHeight)
+	}
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h2></h2>
+		<pre>
+		버튼을 클릭하면 사용 가능한 전체 screen크기로 새로운창을 연다.
+		사용 가능한 전체 screen크기는 현재창의 크기에 영향을 받는다.
+		</pre>
+		<br>
+		<button type="button" onclick="proc1('http://www.naver.com')">open</button>
+		<br>
+		<div id="result1"></div>
+	</div>
+</body>
+</html>
