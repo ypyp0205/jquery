@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(function(){
+		
+		$('#btn1').on('click', function(){
+			
+		//disabled와  enabled  인 것들의 테두리 변경
+		$("form :enabled").css("border", "3px solid #66ff00");
+		$("form :disabled").css("border", "3px solid blue"); 
+
+		})
+		
+		$('#btn2').on('click', function(){
+			// 이미지의 상태값을 가져오기
+			//$('input[type=image]'')
+			imgst = $(':image').prop('disabled');
+			
+			//alert(imgst); true이면 사용불가능, false이면 사용가능
+
+			//가져온 값을 반대로 설정 - set
+			$(':image').prop('disabled', imgst);
+			
+			console.log(imgst);
+			
+		})
+
+	
+	})
+</script>
+</head>
+<body>
+
+	<div class="box">
+		
+		<h2></h2>
+		
+		<pre>
+	:enabled : 사용가능, 접근가능, 실행가능
+	:disabled : 사용불가능, 접근불가능, 실행불가능
+	
+	$("form :enabled").css("border", "3px solid #66ff00");
+	$("form :disabled").css("border", "3px solid blue");
+	
+	상태값 가져오기
+	prop('상태속성이름')  : true 또는 false를 리턴한다.
+ 	
+	상태값 변경
+	prop('상태속성이름', true) 	: 해당 상태를 설정
+	prop('상태속성이름', false) 	: 해당 상태를 해제
+
+	prop('disabled', true) 	: 사용 불가능으로 변경
+	prop('disabled', false) : 사용가능으로 변경 - enabled를 사용하지 않는다.
+		</pre>
+		
+		
+		
+		
+		
+		<form action="../0211/formtest.jsp" method="post"> 
+<input type="button" name="disButton" value="Input Button" disabled><br>
+<input type="checkbox" name="enCheckbox" >체크<br>
+<input type="file" name="disFile"  ><br>
+<input type="hidden" name="enHidden"  value=“”> <br>
+<input type="image" src="../images/image.1.jpg" alt="Submit" disabled><br>
+<input type="password"  value="1111" name="enPassword" disabled > <br>
+<input type="radio" name="disRadio"  value="남" disabled> 남<br>
+<input type="reset" name="enReset" value="취소"><br>
+<input type="submit" name="disSubmit" value="제출" disabled> <br>
+<input type="text" name="enText" value="input text"  > <br>
+<select name="disSelect" disabled><option>Option</option></select><br>
+<textarea name="enTextarea" rows=10 cols=20 >text</textarea><br>
+</form>
+<button id="btn1" type='button'>실행</button>
+<button id="btn2" type='button'>변경</button><br>
+
+		
+</div>
+</body>
+</html>

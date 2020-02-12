@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(function(){
+		
+		$('#btn1').on('click', function(){	
+		
+		
+		$('.box1 li:first').css('background', 'yellow');
+		$('.box1 li:eq(5)').css('background', 'red');
+		$('.box1 li:eq(8)').css('background', 'yellow');
+		$('.box1 li:lt(4)').css('font-weight', 'bold');
+		$('.box1 li:lt(4)').css('font-size', 'xx-large');
+	
+		})	
+
+		
+		$('#btn2').on('click', function(){	
+			
+			$('.box2 tr:odd').css('background', 'white');
+			$('.box2 tr:even').css('background', 'gray');
+			
+			
+		
+			})	
+
+			
+		
+		
+		
+		
+	})
+	
+	
+	
+	
+</script>
+
+<style>
+table {
+	width: 600px;
+	height: 300px;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="box">
+		<h2>기본 필터</h2>
+		
+		
+		<pre>
+
+		</pre>
+		
+	
+		<button id="btn1" type="button">open</button>
+	
+
+		<div class="box box1">
+		
+		
+		<ul>
+		
+		
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+		<li>Four</li>
+		<li>Five</li>
+		<li>Six</li>
+		<li>Seven</li>
+		<li>Eight</li>
+		<li>Nine</li>
+		
+		
+		
+		</ul>
+		
+		
+		
+		
+		</div>
+		
+		<br>
+		
+		
+		<button id="btn2" type="button">open</button>
+	
+	
+	<table class="box2">
+
+	<tr>
+	<td>One</td>
+	<td>62만원</td>
+	</tr>
+	
+	<tr>
+	<td>Two</td>
+	<td>45만원</td>
+	</tr>
+	
+	<tr>
+	<td>Three</td>
+	<td>33만원</td>
+	</tr>
+	
+	<tr>
+	<td>Four</td>
+	<td>72만원</td>
+	</tr>
+	
+	<tr>
+	<td>Five</td>
+	<td>77만원</td>
+	</tr>
+	
+	<tr>
+	<td>Six</td>
+	<td>54만원</td>
+	</tr>
+	
+	<tr>
+	<td>Seven</td>
+	<td>61만원</td>
+	</tr>
+	
+	<tr>
+	<td>Eight</td>
+	<td>52만원</td>
+	</tr>
+	
+	<tr>
+	<td>Nine</td>
+	<td>88만원</td>
+	</tr>
+	
+
+	
+	
+	</table>
+	
+	
+	
+	</div>
+	
+	
+	
+	
+</body>
+</html>
