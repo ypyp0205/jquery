@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(function(){
+
+		$('#runBtn').click(function(){
+			chk = $('#checkTest').prop('checked');
+			sel = $('#selTest option:eq(2)').prop('selected');
+			txt = $('#txtTest').prop('readonly');
+			but = $('#btnTest').prop('disabled');
+			
+			// 설정
+			$('#checkTest').prop('checked', !chk);
+			$('#selTest option:eq(2)').prop('selected', !sel);
+			$('#txtTest').prop('readonly', !txt);
+			
+			/* // 상태값 얻어오기
+			res = "체크박스 : " + $('#checkTest').prop('checked') + "\n";
+			res += "select : " + $('#selTest option:eq(0)').prop('selected') + "\n";
+			res += "readonly : " + $('#txtTest').prop('readonly') + "\n";
+			res += "disabled : " + $('#btnTest').prop('disabled') + "\n";
+			res += "enable : " + $('#btnTest').prop('enable') + "\n";
+		
+				alert(res); */
+		})
+		$('#btnTest').click(function(){
+			alert('hello~~ ' + $('#textTest').val());
+		})
+	})
+</script>
+</head>
+<body>
+
+	<div class="box">
+		
+		<h2></h2>
+		
+		<pre>
+	실행버튼 클릭할때 마다 상태값을 반대로 변경
+	체크박스(checked)
+	select(selected)
+	text(readonly)
+	button(disabled)
+		</pre>
+
+		
+	<form>
+체크박스(라디오버튼) :    
+<input type="checkbox" id="checkTest"  checked><br><br>
+
+리스트박스(select객체) : 
+<select id="selTest">
+<option value="1">하나</option> 
+<option value="2">둘</option>
+<option value="3" selected >셋</option> 
+<option value="4">넷</option>
+</select><br><br>
+
+text객체(readonly) : 
+<input type="text" value="가나다" id="txtTest"><br><br>
+
+button객체(disabled) : 
+<input type="button" value="연습용" id="btnTest"><br><br>
+<input type="button" value="실행" id="runBtn">
+</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
