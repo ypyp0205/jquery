@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+var regcheck = function(){
+	
+	// 이름값
+	
+	// 이름길이
+	if(){
+		alert("Asd");
+		return false;
+	}
+	
+	// 이름 정규식
+	if(){
+		alert("Asd");
+		return false;
+	}
+	
+	return true;
+}

@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+pre{			
+		height : auto;
+		background : #FAECC5;
+		border : 2px solid #D6F0FF;
+		font-size: 20px;
+		padding : 10px;  
+		}
+
+.box{
+	background: yellow;
+	margin: 10px;
+	height: auto;
+	padding: 10px;
+}
+
+.box div{
+	border: 5px dotted orange;
+	height: auto;
+	margin: 10px;
+	padding: 10px;
+}
+.box button {
+	color: white;
+	background: blue;
+	padding: 5px;
+	margin: 5px;
+	/* font-size : 1.2em;*/
+	width:  80px;
+	border-radius : 40px;
+}
+
+.box pre{
+	padding: 15px;
+	color: blue;
+	background: rgb(197, 209, 222);
+	line-height: 1.1em;
+}

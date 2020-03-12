@@ -2,34 +2,41 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="261" key="DIALOG_WIDTH"/>
-		<item value="274" key="DIALOG_Y_ORIGIN"/>
+		<item value="237" key="DIALOG_Y_ORIGIN"/>
+		<item value="1396" key="DIALOG_X_ORIGIN"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="838" key="DIALOG_X_ORIGIN"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-	</section>
-	<section name="org.eclipse.wst.css.ui.internal.preferences.ui.CSSTemplatePreferencePage$CSSEditTemplateDialog_dialogBounds">
-		<item value="612" key="DIALOG_WIDTH"/>
-		<item value="226" key="DIALOG_Y_ORIGIN"/>
-		<item value="331" key="DIALOG_HEIGHT"/>
-		<item value="145" key="DIALOG_X_ORIGIN"/>
-		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-	</section>
-	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
-		<item value="false" key="casesensitive"/>
-		<item value="false" key="incremental"/>
-		<item value="false" key="wholeword"/>
-		<list key="findhistory">
-		</list>
-		<list key="replacehistory">
-		</list>
 	</section>
 	<section name="org.eclipse.wst.html.ui.internal.preferences.ui.HTMLTemplatePreferencePage$HTMLEditTemplateDialog_dialogBounds">
 		<item value="1920" key="DIALOG_WIDTH"/>
 		<item value="-149" key="DIALOG_Y_ORIGIN"/>
-		<item value="-966" key="DIALOG_X_ORIGIN"/>
 		<item value="1040" key="DIALOG_HEIGHT"/>
+		<item value="-966" key="DIALOG_X_ORIGIN"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="email" key="selection"/>
+		<list key="findhistory">
+			<item value="email"/>
+			<item value="cmail"/>
+			<item value="pass2check"/>
+			<item value="btnjo"/>
+			<item value="제출"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.wst.css.ui.internal.preferences.ui.CSSTemplatePreferencePage$CSSEditTemplateDialog_dialogBounds">
+		<item value="612" key="DIALOG_WIDTH"/>
+		<item value="226" key="DIALOG_Y_ORIGIN"/>
+		<item value="145" key="DIALOG_X_ORIGIN"/>
+		<item value="331" key="DIALOG_HEIGHT"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>

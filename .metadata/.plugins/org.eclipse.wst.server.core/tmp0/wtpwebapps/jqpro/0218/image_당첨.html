@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../CSS/mystyle.css">
+<script src="../js/jquery-3.4.1.min.js"></script>
+
+<script>
+ $(function(){
+	$('#start').on('click', function(){
+		$(this).hide();
+		
+		//$('img').css('border', 'none');
+		$('img').removeClass('cred');
+		
+		a = setInterval(function(){
+			$('img:first').appendTo('#result1');
+			
+		}, 500)
+		
+	}) 
+	$('#end').on('click', function(){
+		clearInterval(a);
+		
+		rand = Math.floor(Math.random()*$('img').length);
+		
+		//$('img:eq('+ rand +')').css('border', '5px double red');
+		$('img:eq('+ rand +')').addClass('cred');
+		$('#start').show();
+	})
+	
+ })
+</script>
+<style>
+  img{
+    width : 100px;
+    height : 120px;
+    border-radius : 100%;
+    }
+    
+  .cred{
+       border : 5px double red;
+  }  
+</style>
+
+</head>
+<body>
+
+<div class="box">
+ <h2> </h2>
+<pre>
+ 시작버튼 클릭시 이미지를 회전시킨다
+시작버튼을 클릭하고 난후 시작버튼은 안보임으로 설정한다
+종료버튼 클릭시 랜덤을 이용해서 당첨된 물품에 테두리를 
+부여한다 . 이때 시작버튼은 다시 보임으로 설정한다.
+다시 시작버튼 클릭할때는 테두리를 삭제하고 반복해서 실행한다 
+</pre>
+ <h1>진행중인 이벤트</h1>
+ <h2> 100% 당첨</h2>
+ <p>환영합니다. 시작버튼을 눌러주세요. 당신에 행운울 드립니다</p>
+ <button id="start" type="button">시작</button>
+ <button id="end"  type="button">종료</button>
+ 
+ <div id="result1">
+  <img src="../images/수국.jpg" />
+  <img src="../images/딸기스무디.jpg" />
+  <img src="../images/카페라떼.jpg" />
+  <img src="../images/뱅쇼.jpg" />
+  <img src="../images/핫초코.jpg" />
+  <img src="../images/pizza.jpg" />
+  
+ </div>
+
+</div>
+
+
+</body>
+</html>

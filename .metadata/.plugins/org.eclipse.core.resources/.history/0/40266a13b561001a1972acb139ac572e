@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+var regcheck = function(){
+	//이름값 
+	vname = $('#name').val().trim();
+	namelen = vname.trim().length;
+	
+	vpass = $('#pass').val().trim();
+	passlen = vpass.trim().length;
+	
+	//이름길이
+	if(namelen < 2 || namelen > 5){
+		alert("한글로만 2~5사이 입력");
+		return false;
+	}
+	
+	//이름 정규식 
+	if(!(namereg.test(vname))){
+		alert("이름 형식오류");
+		return false;
+	}
+	////////////////////////////////////
+	// 
+
+	
+	// 비밀번호
+	if(passlen < 4 || passlen > 10){
+		alert("영문이나 숫자로 4~10사이 입력");
+		return false;
+	}
+	
+	// 비밀번호 정규식
+	if(!(passreg.test(vpass))){
+		alert("비밀번호 형식 오류");
+		return false;
+	}
+	return true ;
+	
+	// 생년월일
+	/*vbir =$('#bir').val().trim();*/
+	
+	// 생년월일 정규식
+	
+	
+}

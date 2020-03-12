@@ -1,0 +1,141 @@
+/**
+ * 
+ */
+
+var idcheck = function(){
+	
+	
+	 idvalue =  $('#id').val().trim();
+	 idlen = idvalue.length;
+	 //공백체크
+	 if(idlen <= 0){
+		 alert("아이디입력");
+		 return false;
+	 }
+	 //길이 체크 4~12
+     if(idlen < 4 || idlen > 12){
+    	 alert('id 4~12사이로 입력 ');
+    	 return false;
+     }
+   	 
+	 //형식체크-
+     //영문 소문자로 시작 하고 두 번째 문자부터 영문대소문자와 숫자를 
+     //조합해서 전체길이는 4~12
+	 idreg = /^[a-z][a-zA-Z0-9]{3,11}$/
+	 if(  !(idreg.test(idvalue))){
+	   alert("id 형식오류") ;
+	   return false;
+	 }
+	 
+	 count++;
+	 return true;
+	 
+}
+
+var passcheck = function(){
+
+	vpass = $('#pass').val().trim();
+	passlen = vpass.length;
+	//비밀번호길이 4~10
+	if(passlen <4 || passlen > 10){
+		alert("비밀번호 4~10 사이입력");
+		check = false;
+		return false;
+	}
+	
+	//비밀번호정규식 영문대소문자 특수문자숫자 
+	passreg = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{4,10}$/;
+	if(!(passreg.test(vpass))){
+		alert("비밀번호 형식오류");
+		check = false;
+		return false;
+	}
+	
+	check = true;
+	return true;
+	
+}
+
+var pass2check = function(){
+	vpass = $('#pass').val().trim();
+	vpass2 = $('#pass2').val().trim();
+	
+	pass2len = vpass2.length;
+	
+	if(pass2len <= 0) {
+		check = false;
+		return false;
+	}
+	
+	if(vpass != vpass2){
+		check = false;
+		return false;
+	}
+	check = true;
+	return true;
+}
+var bircheck = function(){
+	//생년월일 입력 
+	birvalue = $('#bir').val().trim();
+	birlen = birvalue.length;
+	
+	if(birlen <= 0){
+		 alert("생년월일을 입력하세요");
+		 return false;
+	}
+	count++;
+	return true;
+}
+var namecheck = function(){
+	
+	vname = $('#name').val().trim();
+	namelen = vname.length;
+	
+	//공백 
+	if(namelen <= 0 ){
+		alert("이름입력");
+		return false;
+	}
+	
+	//정규식 
+	namereg = /^[가-힣]+$|^[a-zA-Z]+$/;
+	if(namereg.test(vname)){
+		regkor = /^[가-힣]+$/;
+		regeng = /^[a-zA-Z]+$/;
+		if(regkor.test(vname)){
+			if(namelen <2 || namelen >5){
+				alert("한글 2~5 사이 ");
+				return false;
+			}
+		}else {
+			if(namelen <5 || namelen >10){
+				alert("영문 5~10 사이 ");
+				return false;
+			}
+		}
+	}else{
+	  alert("이름 형식 오류 ");
+	  return false;
+	}
+	count++;
+	return true;
+}
+
+
+
+var emailcheck = function(){
+vemail = $('#email').val().trim();
+maillen = vemail.length;
+
+if(maillen == 0){
+	alert("이메일 입력");
+	return false;
+}
+mailreg = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+){1,2}$/;
+if(!(mailreg.test(vemail))){
+	alert("이메일형식오류");
+	return false;
+}
+count++;
+return true;
+}

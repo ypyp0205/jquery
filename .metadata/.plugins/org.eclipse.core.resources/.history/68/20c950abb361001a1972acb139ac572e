@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+var regcheck = function(){
+	//이름값 
+	vname = $('#name').val().trim();
+	namelen = vname.trim().length;
+	
+	//이름길이
+	if(namelen < 2 || namelen > 5){
+		alert("Asd");
+		return false;
+	}
+	
+	//이름 정규식 
+	if(!(namereg.test(vname))){
+		alert("이름 형식오류");
+		return false;
+	}
+	////////////////////////////////////
+	// 
+	vpass = $('#pass').val().trim();
+	passlen = vname.trim().length;
+	
+	// 비밀번호
+	if(passlen < a || passlen > z || passlen < A || passlen > Z || passlen <= 0 || passlen >= 9 ){
+		alert("Asd");
+		return false;
+	}
+	
+	// 비밀번호 정규식
+	if(!(passreg.test(vpass))){
+		alert("비밀번호 형식 오류");
+		return false;
+	}
+	return true ;
+	
+	
+}

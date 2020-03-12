@@ -1,0 +1,90 @@
+/**
+ * 
+ */
+var regcheck = function(){
+	//이름값
+	vname = $('#name').val().trim();
+	namelen = vname.length;
+	
+	//이름길이
+	if(namelen <2 || namelen >5){
+		alert("이름 2~5 사이입니다");
+		return false;
+	}
+	
+	//이름 정규식 한글로만 2~5사이
+	namereg = /^[가-gk]+$/;
+	if(!(namereg.test(vname))){
+		alert("이름 형식오류");
+		return false;
+	}
+	////////////////////////////////
+	//비밀번호
+	vpass = $('pass').val().trim();
+	passlen = vpass.length;
+	//비밀번호길이 4~10
+	if(passlen <4 || passlen > 10){
+		alert("비밀번호 4~10 사이입력");
+		return false;
+	}
+	
+	//비밀번호정규식 영문이나 숫자 
+	passreg = /^[a-zA-Z0-9]+$/;
+	if(!(passreg.test(vpass))){
+		alert("비밀번호 형식오류");
+		return false;
+	}
+	//////////////////////////
+	//생년월일 : 숫자4자리–숫자2자리–숫자 2자리
+	vbir = $('#bir').val().trim();
+	birlen = vbir.length;
+	
+	//생년월일 길이
+	if(birlen <=0){
+		alert("생년월일 입력");
+		return false;
+	}
+	//생년월일 형식
+	ptelreg = /^\d{2}-\d{2}-\d{2}$/;
+	if(!(ptelreg.test(vptel))){
+		alert("생년월일 형식오류");
+		return false;
+	}
+	/////////////////////////////////////
+	//휴대폰 : 숫자3자리–숫자4자리–숫자 4자리
+	vptel = $('#ptel').val().trim();
+	ptellen = vptel.length;
+	
+	//전화번호 길이
+	if(ptellen <=0){
+		alert("전화번호 입력");
+		return false;
+	}
+	//전화번호 형식
+	ptelreg = /^\d{3}-\d{4}-\d{4}$/;
+	if(!(ptelreg.test(vptel))){
+		alert("비밀번호 형식오류");
+		return false;
+	}
+	/////////////////////////////
+	//이메일 :  이메일 형식에 맞도록 체크
+	vemail = $('#email').val().trim();
+	maillen = vemail.length;
+	
+	if(maillen == 0){
+		alert("이메일 입력");
+		return false;
+	}
+	mailreg = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+){1,2}$/;
+	if(!(mailreg.test(vemail))){
+		alert("이메일형식오류");
+		return false;
+	}
+	
+	
+	return true ;
+	
+	
+}
+
+

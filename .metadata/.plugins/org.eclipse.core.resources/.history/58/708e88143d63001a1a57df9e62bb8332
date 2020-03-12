@@ -1,0 +1,199 @@
+/**
+ *  갈 입력 항목에 focus와 blur에 대해 각 항목별로 정규식 체크하기
+ */
+	
+var idtest = function(){
+	
+	idlen = idvalue.trim().length;
+	
+	//공백검증
+	if(idlen <= 0 ){
+		alert("id를 입력하세요");
+		return false;
+	}
+	
+	//길이검증
+	if(idlen < 4 ||  idlen > 12){
+		alert("id는 4~12사이로 입력하세요");
+		return false;
+	}
+	
+	//정규식체크 
+	regid =/^[a-z][a-zA-Z0-9]{3,11}$/ ;
+	if(!(regid.test(idvalue))){
+		alert("id형식오류입니다");
+		return false;
+	}
+	
+	return true;
+}
+
+
+
+var nameChk = function(){
+	
+	//이름////////////////////////////////////////////
+	namevalue = $('#name').val();
+	namelen =  namevalue.trim().length;
+	
+	//공백
+	if(namelen <= 0){
+		alert("이름을 입력하세요");
+		return false;
+	}
+	
+	//길이.//정규식
+	namereg = /^[가-힣]+$|^[a-zA-Z]+$/
+	if(namereg.test(namevalue))	{
+		regkor = /^[가-힣]+$/;
+		regeng = /^[a-zA-Z]+$/;
+		
+		if(regkor.test(namevalue)){
+			if(namelen <2 || namelen > 5) {
+				alert("한글이름은 2~5 사이입니다");
+				return false;
+			}
+			
+		}else if(regeng.test(namevalue)){
+			if(namelen <5 || namelen > 10) {
+				alert("영문이름은 5~10 사이입니다");
+				return false;
+			}
+		}
+		
+	}else{
+		  alert("이름 형식오류 입니다");
+		  return false;
+	}
+	
+	return true;
+}	
+var passChk = function(){
+	//비밀번호 /////////////////////////////////////////////////
+	passvalue= $('#pass').val();
+	passreg = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@!#$%^&*()]).{4,10}/;
+	
+	passlen = passvalue.trim().length;
+	//공백 
+	if(passlen <= 0){
+		//alert("비밀번호입력하세요");
+		return false;
+	}
+	
+	//길이
+	if(passlen < 4 || passlen > 10){
+		//alert("비밀번호는 4~10입니다");
+		return false;
+	}
+	
+	//정규식
+	if(!(passreg.test(passvalue))){
+		//alert("비밀번호형식오류입니다");
+		return false;
+	}
+  return true;
+	
+}	
+var pass2Chk = function(){
+	passvalue= $('#pass').val().trim();
+	pass2value= $('#pass2').val().trim();
+	
+	pass2len = pass2value.length;
+	
+	if(pass2len <=0 ) {
+		return false; 
+	}
+	if( passvalue != pass2value){
+		return false;
+	}
+	
+	return true;
+}
+var dateChk = function(){
+	//생년월일 입력 
+	birvalue = $('#bir').val();
+	birreg = /^\d{4}-\d{2}-\d{2}$/;
+	
+	birlen = birvalue.trim().length;
+	
+	if(birlen <= 0){
+		  // alert("생년월일을 입력하세요");
+		console.log("len= false");
+		   return false;
+	}
+	//정규식 
+	if(!(birreg.test(birvalue))){
+		//alert("생년월일 형식오류입니다");
+		console.log("test= false");
+		return false;
+	}
+	console.log("return = true");
+	return true;
+}	
+
+var telChk = function(){
+
+   //전화번호//////////////////////////////////////
+	telvalue = $('#ptel').val();
+	telreg = /^\d{3}-\d{4}-\d{4}$/;
+	
+	tellen = telvalue.trim().length; 
+	
+	if(tellen <= 0){
+	  // alert("휴대폰번호를 입력하세요");
+	   return false;
+	}
+
+	//정규식 
+	if(!(telreg.test(telvalue))){
+		//alert("휴대폰번호 형식오류입니다");
+		return false;
+	}
+	return true;
+}
+var mailChk = function(){
+	emailvalue = $('#email').val();
+	
+	// 공백 체크 
+    if(emailvalue.trim().length <= 0){
+    
+    	//alert("이메일을 입력하세요");
+    	return false;
+    }
+  //정규식
+	emailReg = /^[0-9a-zA-Z]+@[0-9a-zA-Z_-]+(\.[0-9a-zA-Z_-]+){1,2}$/;
+	if(!(emailReg.test(emailvalue))){
+		//alert("이메일 형식 오류!");
+		return false;
+	}
+	
+	return true;
+}	
+   
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
